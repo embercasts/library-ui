@@ -2,15 +2,7 @@ import Route from '@ember/routing/route';
 
 export default Route.extend({
   model() {
-    return [
-      {
-        first: 'J.K.',
-        last: 'Rowling'
-      },
-      {
-        first: 'Tom',
-        last: 'Clancy'
-      }
-    ];
+    return fetch('http://localhost:3000/authors')
+      .then(response => response.json());
   }
 });
