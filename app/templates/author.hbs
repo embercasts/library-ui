@@ -12,8 +12,8 @@
   <h3 class="panel-title">Authors</h3>
 
   <ul class="collection">
-    {{#each model.data as |author|}}
-      {{author-list-item first=author.attributes.first last=author.attributes.last tagName="li"}}
+    {{#each model as |author|}}
+      {{author-list-item first=author.first last=author.last tagName="li"}}
     {{/each}}
   </ul>
 </div>
