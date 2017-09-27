@@ -13,7 +13,9 @@
 
   <ul class="collection">
     {{#each model as |author|}}
-      {{author-list-item first=author.first last=author.last tagName="li"}}
+      {{author-list-item first=author.first last=author.last authorId=author.id tagName="li"}}
     {{/each}}
   </ul>
 </div>
+
+{{outlet}}
