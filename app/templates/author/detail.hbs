@@ -2,13 +2,13 @@
 
 <div class="slide-out">
   <div class="slide-out-card">
-    <a href class="btn-back">
+    {{#link-to "author" class="btn-back"}}
       <span class="sr-only">Back</span>
-    </a>
+    {{/link-to}}
 
     <div class="slide-out-heading">
       <div class="title">
-        <h3>Author Detail</h3>
+        <h3>Author Detail #{{model.id}}</h3>
       </div>
     </div>
 
