@@ -11,6 +11,8 @@
         <h3>{{model.last}}, {{model.first}}</h3>
 
         <div class="actions">
+          {{#link-to "author.edit" model.id class="btn-pop"}}edit{{/link-to}}
+
           <button class="btn-recessed" onclick={{action "deleteAuthor" model}}>delete</button>
         </div>
       </div>

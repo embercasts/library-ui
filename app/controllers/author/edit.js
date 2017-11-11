@@ -2,12 +2,10 @@ import Controller from '@ember/controller';
 
 export default Controller.extend({
   actions: {
-    saveAuthor(ev) {
-      ev.preventDefault();
+    saveAuthor(formValues) {
+      this.model.setProperties(formValues);
 
-      let author = this.store.createRecord('author', this.model);
-
-      author.save()
+      this.model.save()
         .then(() => {
           this.transitionToRoute('author');
         });
