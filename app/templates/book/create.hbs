@@ -1,0 +1,28 @@
+<div class="slide-out-bg"></div>
+<div class="slide-out">
+  <div class="slide-out-card">
+    {{#link-to "book" class="btn-back"}}
+      <span class="sr-only">Back</span>
+    {{/link-to}}
+
+    <div class="slide-out-heading">
+      <div class="title">
+        <h3>New Book</h3>
+      </div>
+    </div>
+
+    <div class="slide-out-content">
+      <form>
+        <p class="control">
+          {{#power-select onchange=(action "selectAuthor") selected=model.author search=(action "searchAuthor") as |author|}}
+            {{author.last}}, {{author.first}}
+          {{/power-select}}
+        </p>
+
+        <div class="form-footer">
+          <button type="submit" class="btn-submit">save</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
