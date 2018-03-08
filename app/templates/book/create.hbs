@@ -12,12 +12,30 @@
     </div>
 
     <div class="slide-out-content">
-      <form>
-        <p class="control">
-          {{#power-select onchange=(action "selectAuthor") selected=model.author search=(action "searchAuthor") as |author|}}
-            {{author.last}}, {{author.first}}
-          {{/power-select}}
-        </p>
+      <form onsubmit={{action "saveBook"}}>
+        <div class="field">
+          <label>Title:</label>
+          {{input type="text" placeholder="Title" value=model.title}}
+        </div>
+
+        <div class="field">
+          <label>ISBN:</label>
+          {{input type="text" placeholder="ISBN" value=model.isbn}}
+        </div>
+
+        <div class="field">
+          <label>Publish Date:</label>
+          {{input type="date" placeholder="Publish Date" value=model.publishDate}}
+        </div>
+
+        <div class="field">
+          <label>Author:</label>
+          <p class="control">
+            {{#power-select onchange=(action (mut model.author)) selected=model.author search=(action "searchAuthor") as |author|}}
+              {{author.last}}, {{author.first}}
+            {{/power-select}}
+          </p>
+        </div>
 
         <div class="form-footer">
           <button type="submit" class="btn-submit">save</button>
