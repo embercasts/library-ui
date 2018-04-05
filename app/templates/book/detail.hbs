@@ -1,0 +1,43 @@
+<div class="slide-out-bg"></div>
+<div class="slide-out">
+  <div class="slide-out-card">
+    {{#link-to "book" class="btn-back"}}
+      <div class="sr-only">Back</div>
+    {{/link-to}}
+
+    <div class="slide-out-heading">
+      <div class="title">
+        <h3>{{model.title}}</h3>
+
+        <div class="actions">
+          {{#link-to "book.edit" model.id class="btn-pop"}}edit{{/link-to}}
+          <button class="btn-recessed" type="button" onclick={{action "destroy"}}>delete</button>
+        </div>
+      </div>
+
+      <div class="details">
+        <p>
+          <strong>Author:</strong>
+
+          {{#link-to "author.detail" model.author.id}}
+            {{model.author.last}}, {{model.author.first}}
+          {{/link-to}}
+        </p>
+        <p>
+          <strong>Publish Date:</strong>
+
+          {{model.publishDate}}
+        </p>
+        <p>
+          <strong>ISBN:</strong>
+
+          {{model.isbn}}
+        </p>
+      </div>
+    </div>
+
+    <div class="slide-out-content">
+      {{outlet}}
+    </div>
+  </div>
+</div>

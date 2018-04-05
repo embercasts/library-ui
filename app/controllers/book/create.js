@@ -2,10 +2,8 @@ import Controller from '@ember/controller';
 
 export default Controller.extend({
   actions: {
-    saveBook(ev) {
-      ev.preventDefault();
-
-      const book = this.store.createRecord('book', this.model);
+    saveBook(attrs) {
+      const book = this.store.createRecord('book', attrs);
 
       book.save()
         .then(() => {
