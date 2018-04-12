@@ -1,0 +1,22 @@
+<div class="title">
+  <h3>{{model.reviews.length}} Reviews</h3>
+
+  <div class="actions">
+    {{#link-to "book.detail.new-review" model.id class="btn-secondary btn-add btn"}}
+      Add your review
+    {{/link-to}}
+  </div>
+</div>
+
+<ul class="review-list">
+  {{#each model.reviews as |review|}}
+    <li class="review">
+      <p>{{review.body}}</p>
+
+      <div class="details">
+        <p class="review-user">{{review.user}}</p>
+        <p class="review-time">{{review.createdAt}}</p>
+      </div>
+    </li>
+  {{/each}}
+</ul>
