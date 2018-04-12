@@ -23,6 +23,12 @@
         <h3>{{model.books.length}} Books from this author</h3>
       </div>
 
+      <div class="actions">
+        {{#link-to "author.detail.new-book" model.id class="btn-secondary btn-add"}}
+          Add a book
+        {{/link-to}}
+      </div>
+
       <ul class="book-list">
         {{#each model.books as |book|}}
           <li class="book">
@@ -38,3 +44,5 @@
     </div>
   </div>
 </div>
+
+{{outlet}}
