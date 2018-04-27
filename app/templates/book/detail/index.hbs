@@ -15,7 +15,7 @@
 
       <div class="details">
         <p class="review-user">{{review.user}}</p>
-        <p class="review-time">{{review.createdAt}}</p>
+        <p class="review-time">{{moment-from-now review.createdAt}}</p>
       </div>
     </li>
   {{/each}}
