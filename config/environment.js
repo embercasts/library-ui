@@ -20,6 +20,17 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
+    },
+
+    'ember-simple-auth-token': {
+      identificationField: 'email',
+      passwordField: 'password',
+      serverTokenEndpoint: 'http://localhost:3000/session',
+      headers: {
+        'Content-Type': 'application/vnd.api+json',
+        'Accept': 'application/vnd.api+json'
+      },
+      refreshAccessTokens: false
     }
   };
 

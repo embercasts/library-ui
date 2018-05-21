@@ -42,9 +42,11 @@
     "ember-moment": "^7.6.0",
     "ember-power-select": "^1.10.4",
     "ember-resolver": "^4.0.0",
+    "ember-simple-auth": "^1.6.0",
+    "ember-simple-auth-token": "^3.0.0",
     "ember-source": "~3.0.0",
     "ember-welcome-page": "^3.0.0",
-    "embercasts-library-styles": "^1.0.3",
+    "embercasts-library-styles": "^1.0.6",
     "eslint-plugin-ember": "^5.0.0",
     "liquid-fire": "^0.29.2",
     "loader.js": "^4.2.3"
