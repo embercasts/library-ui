@@ -1,19 +1,5 @@
 <div class="app">
-  <nav class="main-nav">
-    <h1 class="logo">
-      {{#link-to "index"}}
-        <img src="/logo.svg" alt="Ember Library">
-        <span class="sr-only">Ember Library</span>
-      {{/link-to}}
-    </h1>
-
-    <ul>
-      <li>{{#link-to "author"}}Authors{{/link-to}}</li>
-      <li>{{#link-to "book"}}Books{{/link-to}}</li>
-      <li>{{#link-to "register"}}Register{{/link-to}}</li>
-      <li>{{#link-to "login"}}Login{{/link-to}}</li>
-    </ul>
-  </nav>
+  {{nav-bar class="main-nav" tagName="nav"}}
 
   <main class="app-content">{{outlet}}</main>
 </div>

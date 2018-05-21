@@ -1,0 +1,18 @@
+<h1 class="logo">
+  {{#link-to "index"}}
+    <img src="/logo.svg" alt="Ember Library">
+    <span class="sr-only">Ember Library</span>
+  {{/link-to}}
+</h1>
+
+<ul>
+  <li>{{#link-to "author"}}Authors{{/link-to}}</li>
+  <li>{{#link-to "book"}}Books{{/link-to}}</li>
+
+  {{#if session.isAuthenticated}}
+    <li><a href="#" onclick={{action "logout"}}>Logout</a></li>
+  {{else}}
+    <li>{{#link-to "register"}}Register{{/link-to}}</li>
+    <li>{{#link-to "login"}}Login{{/link-to}}</li>
+  {{/if}}
+</ul>
