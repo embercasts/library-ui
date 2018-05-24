@@ -3,6 +3,7 @@ import { inject as service } from '@ember/service';
 
 export default Component.extend({
   session: service('session'),
+  currentUser: service('current-user'),
 
   actions: {
     logout(ev) {
