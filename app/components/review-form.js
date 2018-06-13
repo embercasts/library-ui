@@ -5,7 +5,6 @@ export default Component.extend({
     this._super(...arguments);
 
     this.setProperties({
-      user: this.get('review.user'),
       body: this.get('review.body'),
       book: this.get('review.book'),
     });
@@ -16,7 +15,6 @@ export default Component.extend({
       ev.preventDefault();
 
       this.onsubmit({
-        user: this.user,
         body: this.body,
         book: this.book,
       });
