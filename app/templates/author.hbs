@@ -3,9 +3,11 @@
     {{input type="text" placeholder="Search by Author Name" value=search}}
   </div>
 
-  {{#link-to "author.create" class="btn-new"}}
-    <div class="sr-only">Add New Author</div>
-  {{/link-to}}
+  {{#if (can "create author")}}
+    {{#link-to "author.create" class="btn-new"}}
+      <div class="sr-only">Add New Author</div>
+    {{/link-to}}
+  {{/if}}
 </div>
 
 <div class="panel-content">

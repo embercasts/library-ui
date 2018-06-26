@@ -3,9 +3,11 @@
     {{input type="text" placeholder="Search by Title or ISBN" value=search}}
   </div>
 
-  {{#link-to "book.create" class="btn-new"}}
-    <div class="sr-only">Add New Book</div>
-  {{/link-to}}
+  {{#if (can "create book")}}
+    {{#link-to "book.create" class="btn-new"}}
+      <div class="sr-only">Add New Book</div>
+    {{/link-to}}
+  {{/if}}
 </div>
 
 <div class="panel-content">

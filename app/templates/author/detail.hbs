@@ -11,9 +11,13 @@
         <h3>{{model.last}}, {{model.first}}</h3>
 
         <div class="actions">
-          {{#link-to "author.edit" model.id class="btn-pop"}}edit{{/link-to}}
+          {{#if (can "edit author" model)}}
+            {{#link-to "author.edit" model.id class="btn-pop"}}edit{{/link-to}}
+          {{/if}}
 
-          <button class="btn-recessed" onclick={{action "deleteAuthor" model}}>delete</button>
+          {{#if (can "delete author" model)}}
+            <button class="btn-recessed" onclick={{action "deleteAuthor" model}}>delete</button>
+          {{/if}}
         </div>
       </div>
       <div class="details">
@@ -31,9 +35,11 @@
       </div>
 
       <div class="actions">
-        {{#link-to "author.detail.new-book" model.id class="btn-secondary btn-add"}}
-          Add a book
-        {{/link-to}}
+        {{#if (can "create book")}}
+          {{#link-to "author.detail.new-book" model.id class="btn-secondary btn-add"}}
+            Add a book
+          {{/link-to}}
+        {{/if}}
       </div>
 
       <ul class="book-list">
