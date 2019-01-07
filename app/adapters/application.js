@@ -4,7 +4,7 @@ import { inject as service } from '@ember/service';
 
 export default DS.JSONAPIAdapter.extend({
   session: service('session'),
-  host: 'http://localhost:3000',
+  host: 'https://mighty-refuge-77649.herokuapp.com',
 
   headers: computed(function() {
     let session = this.get('session');
